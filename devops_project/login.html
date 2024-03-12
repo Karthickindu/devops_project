@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+1<html>
+    <head>
+        <title> Login And Registration Form </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <form id="form1">
+                <h3>USER</h3>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="password" required> 
+                
+                <div class="btn-box">
+                    <button onclick="fun()"> SUBMIT </button>
+                    <button type="button" id="next1">NEXT</button>
+                    
+                </div>
+
+            </form>
+            <form id="form2">
+                <h3>ADMIN</h3>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="password" required>
+                
+                <div class="btn-box">
+                    <button type="button" id="back2">back</button>
+                    <button type="button" id="next2">next</button>
+                    
+                </div>
+                <div class="btn-box">
+                    <button onclick="func()" id="sub2"> SUBMIT </button>
+
+                </div>
+                
+
+            </form>
+
+
+            <form id="form3">
+                <h3>REGISTER</h3>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="password" required>
+                
+                <div class="btn-box">
+                    <button type="button" id="back3">back</button>
+                    <button type="button" id="next3">Submit</button>
+                </div>
+
+            </form>
+
+            <dvi class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small> USER </small></div>
+                <div class="step-col"><small> ADMIN </small></div>
+                <div class="step-col"><small> REGISTER </small></div>
+            </dvi>
+        </div>
+
+
+        <script>
+            var form1 =document.getElementById("form1");
+            var form2 =document.getElementById("form2");
+            var form3 =document.getElementById("form3");
+
+            var next1 =document.getElementById("next1");
+            var next2 =document.getElementById("next2");
+            var back1 =document.getElementById("back1");
+            var back2 =document.getElementById("back2");
+
+            var progress =document.getElementById("progress");
+
+            next1.onclick=function(){
+                form1.style.left="-450px";
+                form2.style.left="40px";
+                progress.style.width= "240px";
+            }
+
+            back2.onclick=function(){
+                form1.style.left="40px";
+                form2.style.left="450px";
+                progress.style.width= "120px";
+            }
+
+            next2.onclick=function(){
+                form2.style.left="-450px";
+                form3.style.left="40px";
+                progress.style.width= "360px";
+            }
+            back3.onclick=function(){
+                form2.style.left="40px";
+                form3.style.left="450px";
+                progress.style.width= "240px";
+            }
+            function fun(){
+                window.location.href="user.html";
+            }
+            function func(){
+                window.location.href="admin.html";
+            }
+        </script>
+        
+    </body>
+</html>
